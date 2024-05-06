@@ -146,7 +146,10 @@ print('Loop is finished.')
 ```
 
 ```Answer goes here:
-
+5
+4
+3
+Loop is finished.
 ```
 
 ## Example #2: Basic While Loop with `continue`
@@ -163,8 +166,12 @@ print('Loop is finished.')
 ```
 
 ```Answer goes here:
+5
+4
+3
 
 ```
+NOTE: This loop will run infinitely. 
 
 ## Example #3: Bike Frame Size
 The following program will ask the user for the frame size of their bike and tell them if it's too big, too small, or the corrrect size. What can we do to have the program continuously prompt the user to enter a size until it's the correct size?
@@ -182,5 +189,14 @@ else:
 
 >**Answer:**
 ```python
+while True:
+  size = int(input("Enter the frame size (cm): "))
 
+  if size > 60:
+    print("The bike is too big!!")
+  elif size < 55:
+    print("The bike is too small!")
+  else:
+    print("The bike is the correct size.")
+    break
 ```
